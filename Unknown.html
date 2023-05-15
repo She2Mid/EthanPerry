@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="icon" type="images/x-icon" href="https://www.freeiconspng.com/uploads/letter-e-icon-png-4.png" />
+<link rel="stylesheet" href="Unknown.css">
+</head>
+<body>
+<div class="login-box">
+  <h2>Access Check</h2>
+  <form method="post">
+    <div class="user-box">
+      <input id="username" type="username" name="username" pattern="Ethan" required>
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input id="password" type="password" pattern="Perry" name="password" required>
+      <label>Password</label>
+    </div>
+    <a href="index.html" onclick="return validateForm()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+</div>
+
+<script>
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  if (username === "Ethan" && password === "Perry") {
+    document.getElementsByTagName("form")[0].submit();
+  } else {
+    alert("Sounds like a skill issue, Get outta here bub.");
+    return false;
+  }
+}
+</script>
+
+</body>
+</html>

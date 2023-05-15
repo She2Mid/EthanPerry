@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple RPG Game</title>
+  </head>
+  <body>
+    <h1>Simple RPG Game</h1>
+    <p>You are an adventurer in a dangerous world. Your goal is to defeat the evil dragon and save the kingdom.</p>
+    <p>Your current stats:</p>
+    <ul>
+      <li><strong>Health:</strong> <span id="health">100</span></li>
+      <li><strong>Attack:</strong> <span id="attack">10</span></li>
+      <li><strong>Defense:</strong> <span id="defense">5</span></li>
+      <li><strong>Gold:</strong> <span id="gold">0</span></li>
+    </ul>
+    <button onclick="fight()">Fight the dragon!</button>
+
+    <script>
+      var health = 100;
+      var attack = 10;
+      var defense = 5;
+      var gold = 0;
+
+      function fight() {
+        var dragonHealth = 50;
+        var dragonAttack = 20;
+
+        while (health > 0 && dragonHealth > 0) {
+          // player attacks dragon
+          var damage = attack - dragonDefense();
+          if (damage < 0) {
+            damage = 0;
+          }
+          dragonHealth -= damage;
+          if (dragonHealth <= 0) {
+            break;
+          }
+
+          // dragon attacks player
+          var dragonDamage = dragonAttack - defense;
+          if (dragonDamage < 0) {
+            dragonDamage = 0;
+          }
+          health -= dragonDamage;
+        }
+
+        if (health > 0) {
+          // player wins
+          gold += 100;
+          health = 100;
+          attack += 5;
+          defense += 2;
+          document.getElementById("health").textContent = health;
+          document.getElementById("attack").textContent = attack;
+          document.getElementById("defense").textContent = defense;
+          document.getElementById("gold").textContent = gold;
+          alert("You defeated the dragon and earned 100 gold!");
+        } else {
+          // player loses
+          health = 0;
+          document.getElementById("health").textContent = health;
+          alert("You were killed by the dragon.");
+        }
+      }
+
+      function dragonDefense() {
+        return Math.floor(Math.random() * defense);
+      }
+    </script>
+  </body>
+</html>

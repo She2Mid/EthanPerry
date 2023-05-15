@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="icon" type="images/x-icon" href="https://www.freeiconspng.com/uploads/letter-e-icon-png-4.png" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="contact.css">
+        <style>
+             #navbar {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+#ABC {
+    background-color: transparent;
+    box-shadow: transparent;
+}
+        </style>
+    </head>
+    <body>
+    <nav id="navbar">
+        <ul>
+          <li> <a href="index.html">Home</a> </li>
+          <li><a href="index2.html">Portfolio</a></li>
+          <li><a href="memes.html">Memes</a></li>
+          <li><a href="social.html">Social Media</a></li>
+        </ul>
+      </nav>
+      <br>
+      <br>
+      <section id="ABC">
+    <div class="wrapper">
+        <form action="mailto:ethan.perry@greatoaks.com" method="post">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder="Who are you?" autofocus/>
+            <label for="name">Name</label>
+          </div>
+          <div class="field">
+            <input type="text" id="email" name="email" placeholder="Your Email" />
+            <label for="email">E-Mail</label>
+          </div>
+          <div class="field">
+            <textarea id="msg" rows="4" name="msg" placeholder="Your message..."></textarea>
+            <label for="msg">Message</label>
+          </div>
+          <input id="Beanie" class="button" type="submit" value="Send" />
+        </form>
+      
+      </div>
+      </section>
+      </body>
+      <footer>
+        <p>&copy; 2023 Ethan Perry</p>
+      </footer>
+      </html>

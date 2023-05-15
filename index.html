@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ethans Home Page</title>
+    <link rel="icon" type="images/x-icon" href="https://www.freeiconspng.com/uploads/letter-e-icon-png-4.png" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+      // When the user scrolls down 20px from the top of the document, slide down the navbar
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 20) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "0px";
+        }
+      }
+      </script>
+</head>
+<div class="preloader">
+    
+  <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-ripple" style="background:0 0">
+    <circle cx="50" cy="50" r="4.719" fill="none" stroke="#1d3f72" stroke-width="2">
+      <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="-1.5s" repeatCount="indefinite"/>
+    </circle><circle cx="50" cy="50" r="27.591" fill="none" stroke="#5699d2" stroke-width="2">
+      <animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="3" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="3" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite"/>
+    </circle>
+  </svg>
+  
+</div>
+<style>
+  body {
+    background-image: url("https://garden.spoonflower.com/c/11788370/p/f/m/To04PszQ2eJ69qf_6xj9saNtBI63EApS9D7kjgDo1tKmtTcMR1RptR0/Light%20Blue%20Solid%20coordinate%20-%20baby%20blue%2C%20sky%20blue%2C%20pastel%20blue%20.jpg");
+  }
+  #navbar {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+</style>
+  <body>
+    <main>
+    <nav id="navbar">
+      <ul>
+        <li> <a href="index.html">Home</a> </li>
+        <li><a href="index2.html">Portfolio</a></li>
+        <li><a href="memes.html">Memes</a></li>
+        <li><a href="social.html">Social Media</a></li>
+      </ul>
+    </nav>
+    <br>
+    <br>
+    </main>
+    <header>
+      <h1>Welcome to Ethan's Website</h1>
+    </header>
+    <section style= height="300"   id="home">
+      <h2>About Me</h2>
+      <img style="float:right;  top:12px;" src="C:\Users\Ethan.Perry\Downloads\me2.jpg" alt="Picture of Yourself" width="425" height="250"> 
+      <p>I love spending my free time playing video games and hanging out with my girlfriend. Whenever we're together, we like to watch movies, listen to music, and play games together. But gaming is definitely our favorite activity. We love exploring new worlds, solving puzzles, and beating challenging bosses. It's always so exciting to see what new adventures and challenges await us in each game we play. Plus, it's a great way to bond and have fun together. I feel lucky to have found someone who shares my passion for gaming, and I can't wait to see what games we'll conquer next.</p>
+    </section> 
+    <section id="professional">
+      <h2>How I would rate my skills.</h2>
+      <table>
+        <tr>
+          <th>Skill</th>
+          <th>Rating</th>
+        </tr>
+        <tr>
+          <td>Grammar</td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td>Punctuality</td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td>Fundamentals</td>
+          <td>8/10</td>
+        </tr>
+      </table>
+    </section>
+    
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <img style="width:25px height:75px float:left" src="C:\Users\Ethan.Perry\Downloads\335024186_761733748605534_4561452016493086617_n.jpg" alt="Hobby Picture">
+      <p style="float:right";>I am a gamer and a member of my school's JROTC program. On the surface, these two passions may seem vastly different, but they both bring me a sense of purpose and community. Through gaming, I have found a network of like-minded individuals who share my love for competition and virtual adventures. In JROTC, I have discovered a sense of discipline and camaraderie that comes with being part of a team. While my time spent gaming may seem frivolous to some, I see it as a way to unwind and recharge after a long day of school and training. At the end of the day, whether I'm leading a virtual raid or marching in formation with my fellow cadets, I feel a sense of fulfillment and pride in the communities I am a part of.</p>
+    </section>
+    <footer>
+      <a id="Luck" href="C:\Users\Ethan.Perry\OneDrive - Great Oaks Career Campuses\Desktop\Outline\CONTACT.html">Contact</a>
+      <p>&copy; 2023 Ethan Perry</p>
+    </footer>
+  </body>
+  <script src="preload.js"></script>
+</html>

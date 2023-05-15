@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.5;
+    
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    transition: top 0.3s;
+    position: absolute;
+    display:inline
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  nav li {
+    margin-right: 1em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-image: url("https://garden.spoonflower.com/c/11788370/p/f/m/To04PszQ2eJ69qf_6xj9saNtBI63EApS9D7kjgDo1tKmtTcMR1RptR0/Light%20Blue%20Solid%20coordinate%20-%20baby%20blue%2C%20sky%20blue%2C%20pastel%20blue%20.jpg");
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  section {
+    padding: 2em;
+    margin: 2em;
+    background-color: #fff;
+    border-radius: 0.3em;
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  th, td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  form {
+    margin-bottom: 2em;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+  }
+  
+  input[type="submit"], input[type="reset"] {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  nav, footer {
+    box-shadow: 0 0 10px 5px;
+    animation: shadow 3s infinite;
+  }
+  
+  @keyframes shadow {
+    0% {
+      box-shadow: 0 0 10px 5px rgb(255, 154, 154);
+    }
+    25% {
+      box-shadow: 0 0 10px 5px rgb(255, 183, 75);
+    }
+    50% {
+      box-shadow: 0 0 10px 5px rgb(100, 254, 83);
+    }
+    75% {
+      box-shadow: 0 0 10px 5px rgb(109, 109, 255);
+    }
+    100% { box-shadow: 0 0 10px 5px rgb(255, 154, 154);
+    }
+  }
+  img {
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  iframe {
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  .preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgb(23, 22, 22);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: opacity 0.3s linear;
+    pointer-events: none;
+  }
+  .preloader{
+    (all of the styles from above);
+    opacity: 1;
+    transform: opacity 1s linear;
+}
+  .preloader.loaded{
+    opacity: 0;
+    pointer-events: none;
+  }
+  body {
+    font-family: Arial, sans-serif;
+}
+#Luck {
+  color: blue;
+  font: bold 1.5em/1.5 'Fjalla One', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+}
+#Luck:hover {
+  color: hotPink;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+  #Luck {
+    background-color: rgb(73, 179, 255);
+    background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .5s .15s;
+    -webkit-background-clip: text;
+  }
+  #Luck:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .7s 0;
+  }
+}
+  #Yes:hover {
+    color:rgb(71, 205, 232)
+  }
+  #Yes:visited {
+    color:rgba(0, 21, 255, 0.6)
+  }
+  /* Customize the scrollbar in webkit-based browsers */
+::-webkit-scrollbar {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  background-color: #333;
+  }
+  ::-webkit-scrollbar-track:hover {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color:#333
+    }
+::-webkit-scrollbar-thumb {
+  background-color: #a4d7f9;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  background-color:#a4d7f9;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Memory Game</title>
+	<style>
+		.card {
+			width: 100px;
+			height: 100px;
+			background-color: grey;
+			margin: 5px;
+			float: left;
+			cursor: pointer;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			font-weight: bold;
+			color: white;
+		}
+		.card.flipped {
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Memory Game</h1>
+	<div id="board"></div>
+
+	<script>
+		const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+		let sequence = [];
+		let playerSequence = [];
+		let isPlayerTurn = false;
+
+		function createBoard() {
+			const board = document.getElementById('board');
+			for (let i = 0; i < colors.length; i++) {
+				const card = document.createElement('div');
+				card.classList.add('card');
+				card.dataset.color = colors[i];
+				card.addEventListener('click', flipCard);
+				board.appendChild(card);
+			}
+		}
+
+		function startGame() {
+			sequence = [];
+			playerSequence = [];
+			isPlayerTurn = false;
+			document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
+			for (let i = 0; i < 3; i++) {
+				const index = Math.floor(Math.random() * colors.length);
+				const card = document.querySelector(`.card:nth-child(${index + 1})`);
+				sequence.push(card.dataset.color);
+			}
+			setTimeout(playSequence, 1000);
+		}
+
+		function playSequence() {
+			isPlayerTurn = false;
+			let i = 0;
+			const interval = setInterval(() => {
+				const card = document.querySelector(`.card[data-color="${sequence[i]}"]`);
+				card.classList.add('flipped');
+				setTimeout(() => card.classList.remove('flipped'), 500);
+				i++;
+				if (i >= sequence.length) {
+					clearInterval(interval);
+					isPlayerTurn = true;
+				}
+			}, 1000);
+		}
+
+		function flipCard() {
+			if (!isPlayerTurn) return;
+			this.classList.add('flipped');
+			playerSequence.push(this.dataset.color);
+			if (playerSequence.length === sequence.length) {
+				isPlayerTurn = false;
+				const isCorrect = JSON.stringify(sequence) === JSON.stringify(playerSequence);
+				if (isCorrect) {
+					document.getElementById('message').textContent = 'You Win!';
+				} else {
+					document.getElementById('message').textContent = 'Game Over!';
+				}
+			}
+		}
+
+		createBoard();
+		startGame();
+	</script>
+	<p id="message"></p>
+	<button onclick="startGame()">Start Game</button>
+</body>
+</html>
